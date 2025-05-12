@@ -1,0 +1,215 @@
+{
+    "generations": [
+      {
+        "year": "2025",
+        "apartments": [
+          {
+            "description": "Young couple in a one-room flat",
+            "tenants": ["Alex", "Jamie"],
+            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+          },
+          {
+            "description": "Two friends in a two-room flat",
+            "tenants": ["Sam", "Riley"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+          },
+          {
+            "description": "Small family",
+            "tenants": ["Sam", "Riley", "Carlos"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+          },
+          {
+            "description": "Big family",
+            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+          },
+          {
+            "description": "Old person",
+            "tenants": ["Abuelita"],
+            "ownership": { "Municipality": 500, "Abuelita": 100 }
+          }
+        ]
+      },
+      {
+        "year": "2035",
+        "apartments": [
+          {
+            "description": "Young couple in a one-room flat",
+            "tenants": ["Alex", "Jamie"],
+            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+          },
+          {
+            "description": "Two friends in a two-room flat",
+            "tenants": ["Sam", "Riley"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+          },
+          {
+            "description": "Small family",
+            "tenants": ["Sam", "Riley", "Carlos"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+          },
+          {
+            "description": "Big family",
+            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+          },
+          {
+            "description": "Old person",
+            "tenants": ["Abuelita"],
+            "ownership": { "Municipality": 500, "Abuelita": 100 }
+          }
+        ]
+      },
+      {
+        "year": "2045",
+        "apartments": [
+          {
+            "description": "Young couple in a one-room flat",
+            "tenants": ["Alex", "Jamie"],
+            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+          },
+          {
+            "description": "Two friends in a two-room flat",
+            "tenants": ["Sam", "Riley"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+          },
+          {
+            "description": "Small family",
+            "tenants": ["Sam", "Riley", "Carlos"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+          },
+          {
+            "description": "Big family",
+            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+          },
+          {
+            "description": "Old person",
+            "tenants": ["Abuelita"],
+            "ownership": { "Municipality": 500, "Abuelita": 100 }
+          }
+        ]
+      },
+      {
+        "year": "2055",
+        "apartments": [
+          {
+            "description": "Young couple in a one-room flat",
+            "tenants": ["Alex", "Jamie"],
+            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+          },
+          {
+            "description": "Two friends in a two-room flat",
+            "tenants": ["Sam", "Riley"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+          },
+          {
+            "description": "Small family",
+            "tenants": ["Sam", "Riley", "Carlos"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+          },
+          {
+            "description": "Big family",
+            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+          },
+          {
+            "description": "Old person",
+            "tenants": ["Abuelita"],
+            "ownership": { "Municipality": 500, "Abuelita": 100 }
+          }
+        ]
+      },
+      {
+        "year": "2065",
+        "apartments": [
+          {
+            "description": "Young couple in a one-room flat",
+            "tenants": ["Alex", "Jamie"],
+            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+          },
+          {
+            "description": "Two friends in a two-room flat",
+            "tenants": ["Sam", "Riley"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+          },
+          {
+            "description": "Small family",
+            "tenants": ["Sam", "Riley", "Carlos"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+          },
+          {
+            "description": "Big family",
+            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+          },
+          {
+            "description": "Old person",
+            "tenants": ["Abuelita"],
+            "ownership": { "Municipality": 500, "Abuelita": 100 }
+          }
+        ]
+      },
+      {
+        "year": "2075",
+        "apartments": [
+          {
+            "description": "Young couple in a one-room flat",
+            "tenants": ["Alex", "Jamie"],
+            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+          },
+          {
+            "description": "Two friends in a two-room flat",
+            "tenants": ["Sam", "Riley"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+          },
+          {
+            "description": "Small family",
+            "tenants": ["Sam", "Riley", "Carlos"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+          },
+          {
+            "description": "Big family",
+            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+          },
+          {
+            "description": "Old person",
+            "tenants": ["Abuelita"],
+            "ownership": { "Municipality": 500, "Abuelita": 100 }
+          }
+        ]
+      },
+      {
+        "year": "2085",
+        "apartments": [
+          {
+            "description": "Young couple in a one-room flat",
+            "tenants": ["Alex", "Jamie"],
+            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+          },
+          {
+            "description": "Two friends in a two-room flat",
+            "tenants": ["Sam", "Riley"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+          },
+          {
+            "description": "Small family",
+            "tenants": ["Sam", "Riley", "Carlos"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+          },
+          {
+            "description": "Big family",
+            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
+            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+          },
+          {
+            "description": "Old person",
+            "tenants": ["Abuelita"],
+            "ownership": { "Municipality": 500, "Abuelita": 100 }
+          }
+        ]
+      }
+    ]
+  }
+  

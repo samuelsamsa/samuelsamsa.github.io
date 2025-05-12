@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Circular Housing Project</title>
+  <style>
+
+@font-face {
+  font-family: "Arketa";
+  src: url("content/OOArketaTrial-Regular.otf") format("opentype");
+}
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: "Arketa";
+      font-size: 0.8em;
+    }
+    #timeline {
+      height: 5vh;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+    #main {
+      flex: 1;
+      display: flex;
+    }
+    #building {
+      width: 50%;
+      height: 100%; /* Ensure the container fills the main area */
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .apartment {
+      flex-shrink: 0;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex: auto;
+    }
+
+    .pie-chart {
+      width: 15vh;
+      align-self: flex-start;
+    }
+
+    .chart {
+      display: flex;
+      align-items: top;
+    }
+
+    #manifesto {
+      width: 50%;
+      padding: 20px;
+      overflow-y: auto;
+      height:95vh;
+      box-sizing: border-box;
+    }
+
+    .highlight {
+      background-color: mediumspringgreen; /* Highlighted words */
+    }
+
+    .removed {
+      text-decoration: line-through; /* Strike-through for removed text */
+      color: red; /* You can also change the color to something that contrasts with the background */
+    }
+
+    .tenants {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tenant {
+      width: 24px;
+      height: 24px;
+    }
+
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/7.0.0/diff.min.js"></script>
+</head>
+<body>
+  <div id="timeline"></div>
+  <div id="main">
+    <div id="building"></div>
+    <div id="manifesto"></div>
+  </div>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    let data = {};
+    let currentGen = 0;
+    const charts = [];
+
+    async function loadData() {
+      const response = await fetch('data.json');
+      data = await response.json();
+      renderTimeline();
+      renderGeneration(0);
+    }
+
+    function renderTimeline() {
+      const timeline = document.getElementById('timeline');
+      timeline.innerHTML = '';
+      data.generations.forEach((gen, index) => {
+        const btn = document.createElement('button');
+        btn.textContent = gen.year;
+        btn.onclick = () => renderGeneration(index);
+        timeline.appendChild(btn);
+      });
+    }
+
+    async function renderGeneration(index) {
+      currentGen = index;
+      const gen = data.generations[index];
+
+      const building = document.getElementById('building');
+      building.innerHTML = '';
+      charts.length = 0; // clear old chart instances
+
+      gen.apartments.forEach((apartment, aptIndex) => {
+        const div = document.createElement('div');
+        div.className = 'apartment';
+        const canvasId = `chart-${aptIndex}`;
+        div.innerHTML = `
+            <div class="houseInfo">
+          <div><strong>Household:</strong> ${apartment.description}</div>
+          <div class="tenants">
+            ${apartment.tenants.map((tenant, i) => {
+                const tenantNames = Object.keys(apartment.ownership).filter(name => name !== "Municipality");
+                const hueIndex = tenantNames.indexOf(tenant) + 1; // +1 to skip Municipality color
+                const hue = (hueIndex * 60) % 360;
+                const color = `hsl(${hue}, 70%, 60%)`;
+                return `
+                <div class="tenant" title="${tenant}">
+                    <svg class="icon" viewBox="0 0 24 24" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="6" r="4"/>
+                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6v1H4v-1z"/>
+                    </svg>
+                </div>
+                `;
+            }).join('')}
+            </div>
+            </div>
+            <div class="chart">
+          <canvas class="pie-chart" id="${canvasId}"></canvas>
+          </div>
+        `;
+        building.appendChild(div);
+
+        // Chart.js pie chart
+        const ownership = apartment.ownership;
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        const chart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: Object.keys(ownership),
+            datasets: [{
+              label: 'Ownership',
+              data: Object.values(ownership),
+              backgroundColor: Object.keys(ownership).map((_, i) =>
+                `hsl(${(i * 60) % 360}, 70%, 60%)`
+              )
+            }]
+          },
+          options: {
+            responsive: false, // prevents it from stretching
+            maintainAspectRatio: true,
+            plugins: {
+              legend: {
+                display: false,
+                position: 'bottom'
+              },
+              tooltip: {
+                callbacks: {
+                  label: (tooltipItem) => {
+                    const val = tooltipItem.raw;
+                    return `${tooltipItem.label}: ${val} bonds`;
+                  }
+                }
+              }
+            }
+          }
+        });
+
+        charts.push(chart);
+      });
+
+      const manifesto = document.getElementById('manifesto');
+      try {
+        const response = await fetch(`content/manifesto-${index}.txt`); // Load the manifesto as a text file
+        const txtText = await response.text();
+
+        // Save raw text for later diffing
+        data.generations[index].manifesto = txtText;
+
+        const html = highlightManifesto(txtText, index); // Use the highlighting function
+        manifesto.innerHTML = html;
+      } catch (err) {
+        manifesto.innerHTML = `<p>Error loading manifesto for generation ${index}</p>`;
+        console.error(err);
+      }
+    }
+
+    function highlightManifesto(currentText, index) {
+  // Convert line breaks to <br> tags for the first generation too
+  const formattedText = currentText.replace(/\n/g, '<br>');
+
+  if (index === 0) {
+    // For the first generation, just return the formatted text with line breaks
+    return formattedText;
+  }
+
+  const prevText = data.generations[index - 1]?.manifesto || '';
+  const diff = Diff.diffWords(prevText, currentText);
+
+  // Process each part of the diff and wrap in the appropriate tags
+  const patched = diff.map(part => {
+    if (part.added) {
+      // For added text, wrap it in a span with the highlight class
+      return `<span class="highlight">${escapeHtml(part.value)}</span>`;
+    } else if (part.removed) {
+      // For removed text, wrap it in a <del> tag with the removed class
+      return `<del class="removed">${escapeHtml(part.value)}</del>`;
+    }
+    // For unchanged text, just return the part as is
+    return escapeHtml(part.value);
+  }).join('');
+
+  // Ensure the formatted diff text has line breaks
+  return patched.replace(/\n/g, '<br>');
+}
+
+
+    function escapeHtml(str) {
+      // Escape HTML special characters to prevent any unsafe HTML injection
+      const div = document.createElement("div");
+      div.innerText = str;
+      return div.innerHTML;
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
