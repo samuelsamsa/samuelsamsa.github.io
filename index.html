@@ -32,7 +32,7 @@
       display: flex;
     }
     #building {
-      width: 50%;
+      width: calc(50% - 40px);      
       height: 100%; /* Ensure the container fills the main area */
       display: flex;
       flex-direction: column;
@@ -62,7 +62,7 @@
     }
 
     #manifesto {
-      width: 50%;
+      width: calc(50% - 40px);
       padding: 20px;
       overflow-y: auto;
       height:95vh;
@@ -78,22 +78,72 @@
       color: red; /* You can also change the color to something that contrasts with the background */
     }
 
-    .tenants {
-      display: flex;
-      gap: 8px;
-      margin-top: 8px;
-      flex-wrap: wrap;
-    }
+    .owner {
+  position: relative;
+  display: inline-block;
+}
 
-    .tenant {
-      width: 24px;
-      height: 24px;
-    }
+.owner::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: black;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 9999;
+}
 
-    .icon {
-      width: 100%;
-      height: 100%;
-    }
+.owner:hover::after {
+  opacity: 1;
+}
+
+
+    .ownership-row {
+  display: flex;
+    align-items: center;
+}
+
+.ownership-row .owners {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.outside-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.inside-icon {
+  width: 30px;
+  height: 30px;
+}
+
+#bond-chart-container {
+  width: 80px; /* Narrow vertical bar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 5px;
+}
+
+.chartjs-tooltip {
+  z-index: 9999 !important;
+  position: relative; /* or absolute */
+}
+
+
   </style>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/7.0.0/diff.min.js"></script>
@@ -102,8 +152,15 @@
   <div id="timeline"></div>
   <div id="main">
     <div id="building"></div>
+    
+    <!-- New container for vertical bar chart -->
+    <div id="bond-chart-container">
+      <canvas id="bond-chart"></canvas>
+    </div>
+    
     <div id="manifesto"></div>
   </div>
+  
 
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -111,7 +168,40 @@
   <script>
     let data = {};
     let currentGen = 0;
+    let bondChart = null;
+
     const charts = [];
+    const OWNER_COLORS = {
+  "municipality": "#000000",
+  "alex": "#1f77b4",     // Blue
+  "jamie": "#ff7f0e",    // Orange
+  "sam": "#2ca02c",      // Green
+  "riley": "#d62728",    // Red
+  "carlos": "#9467bd",   // Purple
+  "bene": "#8c564b",     // Brown
+  "fran": "#e377c2",     // Pink
+  "felix": "#17becf",    // Teal
+  "marta": "#bcbd22",    // Olive
+  "marlen": "#aec7e8",   // Light blue
+  "robin": "#ffbb78",    // Light orange
+  "jack": "#98df8a",     // Light green
+  "abuelita": "#ff9896", // Light red
+  "adam": "#c5b0d5",     // Light purple
+  "camila": "#c49c94",   // Light brown
+  "gianluca": "#f7b6d2", // Light pink
+  "sasha": "#9edae5",    // Light teal
+  "juan": "#dbdb8d",     // Pale yellow-green
+  "joshua": "#7f7f7f",   // Medium gray
+  "li": "#393b79",       // Deep navy
+  "jorge": "#637939",    // Dark olive
+  "nat": "#8c6d31",      // Mustard brown
+  "marco": "#843c39",    // Brick red
+  "can": "#7b4173",      // Plum
+  "floor": "#3182bd",    // Sky blue
+  "lu": "#31a354"        // Bright green
+};
+
+
 
     async function loadData() {
       const response = await fetch('data.json');
@@ -145,23 +235,64 @@
         const canvasId = `chart-${aptIndex}`;
         div.innerHTML = `
             <div class="houseInfo">
+          <div> ${apartment.size}</div>
           <div><strong>Household:</strong> ${apartment.description}</div>
-          <div class="tenants">
-            ${apartment.tenants.map((tenant, i) => {
-                const tenantNames = Object.keys(apartment.ownership).filter(name => name !== "Municipality");
-                const hueIndex = tenantNames.indexOf(tenant) + 1; // +1 to skip Municipality color
-                const hue = (hueIndex * 60) % 360;
-                const color = `hsl(${hue}, 70%, 60%)`;
-                return `
-                <div class="tenant" title="${tenant}">
-                    <svg class="icon" viewBox="0 0 24 24" fill="${color}" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="6" r="4"/>
-                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6v1H4v-1z"/>
-                    </svg>
-                </div>
-                `;
-            }).join('')}
-            </div>
+          <div class="ownership-row inside">
+  <div><strong>Tenants:</strong></div>
+  <div class="owners">
+    ${Object.entries(apartment.ownership.inside).map(([owner, value], i) => {
+        const hue = (i * 60) % 360;
+        const color = OWNER_COLORS[owner.toLowerCase()] || "#ccc";
+
+
+        return `
+        <div class="owner" data-tooltip="${owner} - ${value} bonds">
+          <svg class="icon inside-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="cutout-mask">
+      <!-- White shapes = visible; black shapes = transparent -->
+      <!-- Full white background to start with -->
+      <rect width="100%" height="100%" fill="white" />
+      
+      <!-- Draw black circle and path to cut out -->
+      <circle cx="24" cy="21.8" r="4" fill="black"/>
+      <path d="M16,35.8c0-4,4-6,8-6s8,2,8,6v1h-16v-1Z" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Apply the mask to the polygon -->
+  <polygon 
+    points="39 42.8 9 42.8 9 18.8 24 5.2 39 18.8 39 42.8" 
+    fill="${color}" 
+    mask="url(#cutout-mask)"
+  />
+</svg>
+
+        </div>
+        `;
+    }).join('')}
+  </div>
+</div>
+<div class="ownership-row outside">
+  <div><strong>External bond holders:</strong></div>
+  <div class="owners">
+    ${Object.entries(apartment.ownership.outside).map(([owner, value], i) => {
+        const hue = ((i + 5) * 60) % 360; // Offset hues to avoid duplication
+        const color = OWNER_COLORS[owner.toLowerCase()] || "#ccc";
+
+
+        return `
+        <div class="owner" data-tooltip="${owner} - ${value} bonds">
+          <svg class="icon outside-icon" viewBox="0 0 24 24" fill="${color}" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="6" r="4"/>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6v1H4v-1z"/>
+          </svg>
+        </div>
+        `;
+    }).join('')}
+  </div>
+</div>
+
             </div>
             <div class="chart">
           <canvas class="pie-chart" id="${canvasId}"></canvas>
@@ -171,41 +302,128 @@
 
         // Chart.js pie chart
         const ownership = apartment.ownership;
-        const ctx = document.getElementById(canvasId).getContext('2d');
-        const chart = new Chart(ctx, {
-          type: 'pie',
-          data: {
-            labels: Object.keys(ownership),
-            datasets: [{
-              label: 'Ownership',
-              data: Object.values(ownership),
-              backgroundColor: Object.keys(ownership).map((_, i) =>
-                `hsl(${(i * 60) % 360}, 70%, 60%)`
-              )
-            }]
-          },
-          options: {
-            responsive: false, // prevents it from stretching
-            maintainAspectRatio: true,
-            plugins: {
-              legend: {
-                display: false,
-                position: 'bottom'
-              },
-              tooltip: {
-                callbacks: {
-                  label: (tooltipItem) => {
-                    const val = tooltipItem.raw;
-                    return `${tooltipItem.label}: ${val} bonds`;
-                  }
-                }
-              }
-            }
-          }
-        });
 
-        charts.push(chart);
+// Merge inside and outside ownership into a single flat object
+const combinedOwnership = {
+  ...ownership.inside,
+  ...ownership.outside
+};
+
+// Generate labels
+const labels = Object.keys(combinedOwnership);
+
+// Generate data values
+const data = Object.values(combinedOwnership);
+
+const backgroundColor = labels.map((label, i) => OWNER_COLORS[label.toLowerCase()] || `hsl(${i * 40}, 70%, 60%)`);
+
+
+
+
+
+// Setup Chart.js pie chart
+const ctx = document.getElementById(canvasId).getContext('2d');
+const chart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels,
+    datasets: [{
+      label: 'Ownership',
+      data,
+      backgroundColor
+    }]
+  },
+  options: {
+    responsive: false,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => {
+            const val = tooltipItem.raw;
+            return `${tooltipItem.label}: ${val} bonds`;
+          }
+        }
+      }
+    }
+  }
+});
+
+charts.push(chart);
+
       });
+
+      // Calculate total bonds per owner for the generation
+const totalBonds = {};
+
+// Sum inside and outside ownership for all apartments
+gen.apartments.forEach(apartment => {
+  ['inside', 'outside'].forEach(type => {
+    Object.entries(apartment.ownership[type]).forEach(([owner, bonds]) => {
+      const key = owner.toLowerCase();
+      totalBonds[key] = (totalBonds[key] || 0) + bonds;
+    });
+  });
+});
+
+// Prepare data for Chart.js
+const labels = Object.keys(totalBonds);
+const dataValues = labels.map(label => totalBonds[label]);
+const backgroundColors = labels.map(label => OWNER_COLORS[label] || "#ccc");
+
+// Create/update vertical stacked bar chart
+const ctxBond = document.getElementById('bond-chart').getContext('2d');
+
+if (bondChart) {
+  bondChart.destroy();
+}
+
+bondChart = new Chart(ctxBond, {
+  type: 'bar',
+  data: {
+    labels: ['Total Bonds'],
+    datasets: labels.map((label, i) => ({
+      label,
+      data: [dataValues[i]],
+      backgroundColor: backgroundColors[i],
+      stack: 'stack1',
+    }))
+  },
+  options: {
+    indexAxis: 'x',  // horizontal bars (so vertical stacked bars)
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        stacked: true,
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Bonds'
+        }
+      },
+      y: {
+        stacked: true,
+        ticks: { display: false }, // Hide label 'Total Bonds' on vertical axis
+        grid: { display: false }
+      }
+    },
+    plugins: {
+      legend: {
+    display: false
+  },
+      tooltip: {
+        callbacks: {
+          label: ctx => `${ctx.dataset.label}: ${ctx.parsed.x} bonds`
+        }
+      }
+    }
+  }
+});
+
 
       const manifesto = document.getElementById('manifesto');
       try {
