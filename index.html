@@ -152,7 +152,8 @@
     flex-wrap: wrap;
     height: auto;
     padding: 10px;
-    gap: 10px;
+    gap: 5px;
+    box-sizing: border-box;
   }
 
   #main {
@@ -164,11 +165,12 @@
     border-right: none;
     height: auto;
     padding: 10px;
+    box-sizing: border-box;
   }
 
   #bond-chart-container {
-    width: 100vW;/* Optionally hide the vertical chart on mobile */
-    height: 15vH;
+    width: 100vw;/* Optionally hide the vertical chart on mobile */
+    height: 15vh;
   }
 
   .apartment {
@@ -295,9 +297,9 @@
         div.innerHTML = `
             <div class="houseInfo">
           <div> ${apartment.size}</div>
-          <div><strong>Household:</strong> ${apartment.description}</div>
+          <div>Household: ${apartment.description}</div>
           <div class="ownership-row inside">
-  <div><strong>Tenants:</strong></div>
+  <div>Tenants:</div>
   <div class="owners">
     ${Object.entries(apartment.ownership.inside).map(([owner, value], i) => {
         const hue = (i * 60) % 360;
@@ -333,7 +335,7 @@
   </div>
 </div>
 <div class="ownership-row outside">
-  <div><strong>External bond holders:</strong></div>
+  <div>External bond holders:</div>
   <div class="owners">
     ${Object.entries(apartment.ownership.outside).map(([owner, value], i) => {
         const hue = ((i + 5) * 60) % 360; // Offset hues to avoid duplication
