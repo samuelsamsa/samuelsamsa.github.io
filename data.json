@@ -4,211 +4,572 @@
         "year": "2025",
         "apartments": [
           {
-            "description": "Young couple in a one-room flat",
+            "size": "Apartment #1 — One bedroom",
+            "description": "Young couple",
             "tenants": ["Alex", "Jamie"],
-            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+            "ownership": {
+              "inside": {
+                "Alex": 100,
+                "Jamie": 100
+              },
+              "outside": {
+                "Municipality": 800
+              }
+            }
           },
           {
-            "description": "Two friends in a two-room flat",
+            "size": "Apartment #2 — Two bedrooms",
+            "description": "Two close friends",
             "tenants": ["Sam", "Riley"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+            "ownership": {
+              "inside": {
+                "Sam": 100,
+                "Riley": 100
+              },
+              "outside": {
+                "Municipality": 800
+              }
+            }
           },
           {
+            "size": "Apartment #3 — Three bedrooms",
             "description": "Small family",
-            "tenants": ["Sam", "Riley", "Carlos"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+            "tenants": ["Carlos", "Bene", "Fran"],
+            "ownership": {
+              "inside": {
+                "Carlos": 100,
+                "Bene": 100
+              },
+              "outside": {
+                "Municipality": 800
+              }
+            }
           },
           {
+            "size": "Apartment #4 — Four bedrooms",
             "description": "Big family",
-            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+            "tenants": ["Felix", "Marta", "Marlen", "Robin", "Jack"],
+            "ownership": {
+              "inside": {
+                "Felix": 100,
+                "Marta": 50,
+                "Marlen": 50
+              },
+              "outside": {
+                "Municipality": 800
+              }
+            }
           },
           {
+            "size": "Apartment #5 — Four bedrooms",
             "description": "Old person",
             "tenants": ["Abuelita"],
-            "ownership": { "Municipality": 500, "Abuelita": 100 }
+            "ownership": {
+              "inside": {
+                "Abuelita": 100
+              },
+              "outside": {
+                "Municipality": 900
+              }
+            }
           }
-        ]
+        ]        
       },
       {
         "year": "2035",
         "apartments": [
           {
-            "description": "Young couple in a one-room flat",
-            "tenants": ["Alex", "Jamie"],
-            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+            "size": "Apartment #1 — One bedroom",
+            "description": "Young couple split, one cheated, It was a mess.",
+            "tenants": ["Jamie"],
+            "ownership": {
+              "inside": {
+                "Jamie": 300
+              },
+              "outside": {
+                "Municipality": 700
+              }
+            }
           },
           {
-            "description": "Two friends in a two-room flat",
-            "tenants": ["Sam", "Riley"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+            "size": "Apartment #2 — Two bedroom",
+            "description": "A couple and a friend. At the beginning they weren't really sure about moving together, but for now it seems to be working :)",
+            "tenants": ["Sam", "Riley", "Adam"],
+            "ownership": {
+              "inside": {
+                "Sam": 200,
+                "Riley": 150,
+                "Adam": 50
+              },
+              "outside": {
+                "Municipality": 600
+              }
+            }
           },
           {
-            "description": "Small family",
-            "tenants": ["Sam", "Riley", "Carlos"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+            "size": "Apartment #3 — Three bedrooms",
+            "description": "Small family. The kid turned 12 recently. They're annoying sometimes.",
+            "tenants": ["Carlos", "Bene", "Fran"],
+            "ownership": {
+              "inside": {
+                "Carlos": 200,
+                "Bene": 200,
+                "Fran": 0
+              },
+              "outside": {
+                "Municipality": 600
+              }
+            }
           },
           {
-            "description": "Big family",
-            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+            "size": "Apartment #4 — Four bedrooms",
+            "description": "Big family. The parents are struggling with work, usually you see the kids with the grandma.",
+            "tenants": ["Felix", "Marta", "Marlen", "Robin", "Jack"],
+            "ownership": {
+              "inside": {
+                "Felix": 200,
+                "Marta": 100,
+                "Marlen": 100,
+                "Robin": 0,
+                "Jack": 0
+              },
+              "outside": {
+                "Municipality": 600
+              }
+            }
           },
           {
-            "description": "Old person",
+            "size": "Apartment #5 — Four bedrooms",
+            "description": "Old person. They are quite nice.",
             "tenants": ["Abuelita"],
-            "ownership": { "Municipality": 500, "Abuelita": 100 }
+            "ownership": {
+              "inside": {
+                "Abuelita": 200
+              },
+              "outside": {
+                "Municipality": 800
+              }
+            }
           }
-        ]
+        ]  
       },
       {
         "year": "2045",
         "apartments": [
           {
-            "description": "Young couple in a one-room flat",
-            "tenants": ["Alex", "Jamie"],
-            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+            "size": "Apartment #1 — One bedroom",
+            "description": "Single person. Starting your life again can be tough.",
+            "tenants": ["Jamie"],
+            "ownership": {
+              "inside": {
+                "Jamie": 400
+              },
+              "outside": {
+                "Municipality": 600
+              }
+            }
           },
           {
-            "description": "Two friends in a two-room flat",
-            "tenants": ["Sam", "Riley"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+            "size": "Apartment #2 — Two bedroom",
+            "description": "A couple and a friend. They host really good parties on Fridays. ",
+            "tenants": ["Sam", "Riley", "Adam"],
+            "ownership": {
+              "inside": {
+                "Sam": 300,
+                "Riley": 200,
+                "Adam": 100
+              },
+              "outside": {
+                "Municipality": 400
+              }
+            }
           },
           {
-            "description": "Small family",
-            "tenants": ["Sam", "Riley", "Carlos"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+            "size": "Apartment #3 — Three bedrooms",
+            "description": "Small family. I think they're subletting the flat.",
+            "tenants": ["Carlos", "Bene", "Fran"],
+            "ownership": {
+              "inside": {
+                "Carlos": 275,
+                "Bene": 275,
+                "Fran": 50
+              },
+              "outside": {
+                "Municipality": 400
+              }
+            }
           },
           {
-            "description": "Big family",
-            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+            "size": "Apartment #4 — Four bedrooms",
+            "description": "Big family. The kids aren't kids anymore.",
+            "tenants": ["Felix", "Marta", "Marlen", "Robin", "Jack"],
+            "ownership": {
+              "inside": {
+                "Felix": 300,
+                "Marta": 150,
+                "Marlen": 150,
+                "Robin": 50,
+                "Jack": 50
+              },
+              "outside": {
+                "Municipality": 300
+              }
+            }
           },
           {
-            "description": "Old person",
-            "tenants": ["Abuelita"],
-            "ownership": { "Municipality": 500, "Abuelita": 100 }
+            "size": "Apartment #5 — Four bedrooms",
+            "description": "The old person passed away. Now some students took the flat.",
+            "tenants": ["Camila", "Gianluca", "Sasha", "Juan"],
+            "ownership": {
+              "inside": {
+                "Camila": 75,
+                "Gianluca": 75,
+                "Sasha": 75,
+                "Juan": 75
+              },
+              "outside": {
+                "Municipality": 700
+              }
+            }
           }
-        ]
+        ]  
       },
       {
         "year": "2055",
         "apartments": [
           {
-            "description": "Young couple in a one-room flat",
-            "tenants": ["Alex", "Jamie"],
-            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+            "size": "Apartment #1 — One bedroom",
+            "description": "Single person. For a moment, it seems like everything is going well.",
+            "tenants": ["Jamie"],
+            "ownership": {
+              "inside": {
+                "Jamie": 500
+              },
+              "outside": {
+                "Municipality": 500
+              }
+            }
           },
           {
-            "description": "Two friends in a two-room flat",
-            "tenants": ["Sam", "Riley"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+            "size": "Apartment #2 — Two bedroom",
+            "description": "A couple and a friend. People complained, so no more parties. ",
+            "tenants": ["Sam", "Riley", "Adam"],
+            "ownership": {
+              "inside": {
+                "Sam": 400,
+                "Riley": 250,
+                "Adam": 150
+              },
+              "outside": {
+                "Municipality": 200
+              }
+            }
           },
           {
-            "description": "Small family",
-            "tenants": ["Sam", "Riley", "Carlos"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+            "size": "Apartment #3 — Three bedrooms",
+            "description": "Sublets aren't allowed, so the previous household was kicked out. A small group of friends moved in.",
+            "tenants": ["Joshua", "Li", "Jorge"],
+            "ownership": {
+              "inside": {
+                "Joshua": 100,
+                "Li": 100,
+                "Jorge": 100 
+              },
+              "outside": {
+                "Municipality": 200,
+                "Carlos": 250,
+                "Bene": 250,
+                "Fran": 0
+              }
+            }
           },
           {
-            "description": "Big family",
-            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+            "size": "Apartment #4 — Four bedrooms",
+            "description": "Big family. The kids want to move out, but the housing crisis makes it impossible.",
+            "tenants": ["Felix", "Marta", "Marlen", "Robin", "Jack"],
+            "ownership": {
+              "inside": {
+                "Felix": 400,
+                "Marta": 200,
+                "Marlen": 200,
+                "Robin": 100,
+                "Jack": 100
+              },
+              "outside": {
+                "Municipality": 0
+              }
+            }
           },
           {
-            "description": "Old person",
-            "tenants": ["Abuelita"],
-            "ownership": { "Municipality": 500, "Abuelita": 100 }
+            "size": "Apartment #5 — Four bedrooms",
+            "description": "Finding a job after graduation is not as easy as it seems !!",
+            "tenants": ["Camila", "Gianluca", "Sasha", "Juan"],
+            "ownership": {
+              "inside": {
+                "Camila": 125,
+                "Gianluca": 125,
+                "Sasha": 125,
+                "Juan": 125
+              },
+              "outside": {
+                "Municipality": 500
+              }
+            }
           }
-        ]
+        ]  
       },
       {
         "year": "2065",
         "apartments": [
           {
-            "description": "Young couple in a one-room flat",
-            "tenants": ["Alex", "Jamie"],
-            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+            "size": "Apartment #1 — One bedroom",
+            "description": "Single person. They lost their job recently, but everyone seems to be helping.",
+            "tenants": ["Jamie"],
+            "ownership": {
+              "inside": {
+                "Jamie": 500
+              },
+              "outside": {
+                "Municipality": 500
+              }
+            }
           },
           {
-            "description": "Two friends in a two-room flat",
-            "tenants": ["Sam", "Riley"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+            "size": "Apartment #2 — Two bedroom",
+            "description": "A couple and a friend. The couple are looking for a new space with more privacy... ",
+            "tenants": ["Sam", "Riley", "Adam"],
+            "ownership": {
+              "inside": {
+                "Sam": 500,
+                "Riley": 300,
+                "Adam": 200
+              },
+              "outside": {
+                "Municipality": 0
+              }
+            }
           },
           {
-            "description": "Small family",
-            "tenants": ["Sam", "Riley", "Carlos"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+            "size": "Apartment #3 — Three bedrooms",
+            "description": "Wait, I think they might not be just friends!",
+            "tenants": ["Joshua", "Li", "Jorge"],
+            "ownership": {
+              "inside": {
+                "Joshua": 200,
+                "Li": 200,
+                "Jorge": 200 
+              },
+              "outside": {
+                "Municipality": 0,
+                "Carlos": 200,
+                "Bene": 200
+              }
+            }
           },
           {
-            "description": "Big family",
-            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+            "size": "Apartment #4 — Four bedrooms",
+            "description": "Not so big anymore family. Sorry for your loss.",
+            "tenants": ["Felix", "Marta", "Robin", "Jack"],
+            "ownership": {
+              "inside": {
+                "Felix": 450,
+                "Marta": 250,
+                "Robin": 150,
+                "Jack": 150
+              },
+              "outside": {
+                "Municipality": 0
+              }
+            }
           },
           {
-            "description": "Old person",
-            "tenants": ["Abuelita"],
-            "ownership": { "Municipality": 500, "Abuelita": 100 }
+            "size": "Apartment #5 — Four bedrooms",
+            "description": "One found a job in the countryside, so they had to leave. Say welcome to the new flatmate!",
+            "tenants": ["Camila", "Gianluca", "Sasha", "Nat"],
+            "ownership": {
+              "inside": {
+                "Camila": 175,
+                "Gianluca": 175,
+                "Sasha": 175,
+                "Nat": 50
+              },
+              "outside": {
+                "Municipality": 350,
+                "Juan": 75
+              }
+            }
           }
-        ]
+        ]  
       },
       {
         "year": "2075",
         "apartments": [
           {
-            "description": "Young couple in a one-room flat",
-            "tenants": ["Alex", "Jamie"],
-            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+            "size": "Apartment #1 — One bedroom",
+            "description": "It's better not to ask.",
+            "tenants": ["Jamie"],
+            "ownership": {
+              "inside": {
+                "Jamie": 500
+              },
+              "outside": {
+                "Municipality": 500
+              }
+            }
           },
           {
-            "description": "Two friends in a two-room flat",
-            "tenants": ["Sam", "Riley"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+            "size": "Apartment #2 — Two bedroom",
+            "description": "They all moved out and two new people joined the flat. They're nice but it's not the same. ",
+            "tenants": ["Marco", "Can"],
+            "ownership": {
+              "inside": {
+                "Marco": 100,
+                "Can": 100
+              },
+              "outside": {
+                "Municipality": 0,
+                "Sam": 400,
+                "Riley": 250,
+                "Adam": 150
+              }
+            }
           },
           {
-            "description": "Small family",
-            "tenants": ["Sam", "Riley", "Carlos"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+            "size": "Apartment #3 — Three bedrooms",
+            "description": "It crazy how well they manage the relationship",
+            "tenants": ["Joshua", "Li", "Jorge"],
+            "ownership": {
+              "inside": {
+                "Joshua": 300,
+                "Li": 300,
+                "Jorge": 300 
+              },
+              "outside": {
+                "Municipality": 0,
+                "Carlos": 50,
+                "Bene": 50
+              }
+            }
           },
           {
-            "description": "Big family",
-            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+            "size": "Apartment #4 — Four bedrooms",
+            "description": "The parents decided to move to a new place, so now it's only the kids.",
+            "tenants": ["Robin", "Jack"],
+            "ownership": {
+              "inside": {
+                "Robin": 250,
+                "Jack": 250
+              },
+              "outside": {
+                "Municipality": 0,
+                "Felix": 350,
+                "Marta": 150
+              }
+            }
           },
           {
-            "description": "Old person",
-            "tenants": ["Abuelita"],
-            "ownership": { "Municipality": 500, "Abuelita": 100 }
+            "size": "Apartment #5 — Four bedrooms",
+            "description": "Another one left, so they needed to find a new student, I guess. ",
+            "tenants": ["Gianluca", "Sasha", "Nat", "Floor"],
+            "ownership": {
+              "inside": {
+                "Gianluca": 225,
+                "Sasha": 225,
+                "Nat": 100,
+                "Floor": 50
+              },
+              "outside": {
+                "Municipality": 250,
+                "Juan": 25,
+                "Camila": 125
+              }
+            }
           }
-        ]
+        ]  
       },
       {
-        "year": "2085",
+       "year": "2085",
         "apartments": [
           {
-            "description": "Young couple in a one-room flat",
-            "tenants": ["Alex", "Jamie"],
-            "ownership": { "Municipality": 500, "Alex": 300, "Jamie": 200 }
+            "size": "Apartment #1 — One bedroom",
+            "description": "There's too many memories in this house, so they decided to leave. New person in the building.",
+            "tenants": ["Lu"],
+            "ownership": {
+              "inside": {
+                "Lu": 100
+              },
+              "outside": {
+                "Municipality": 450,
+                "Jamie": 450
+              }
+            }
           },
           {
-            "description": "Two friends in a two-room flat",
-            "tenants": ["Sam", "Riley"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100 }
+            "size": "Apartment #2 — Two bedroom",
+            "description": "They adopted a cat, which is nice, but I still miss the parties...",
+            "tenants": ["Marco", "Can"],
+            "ownership": {
+              "inside": {
+                "Marco": 200,
+                "Can": 200
+              },
+              "outside": {
+                "Municipality": 0,
+                "Sam": 300,
+                "Riley": 200,
+                "Adam": 100
+              }
+            }
           },
           {
-            "description": "Small family",
-            "tenants": ["Sam", "Riley", "Carlos"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100 }
+            "size": "Apartment #3 — Three bedrooms",
+            "description": "I'm not even surprised at this point.",
+            "tenants": ["Joshua", "Li", "Jorge"],
+            "ownership": {
+              "inside": {
+                "Joshua": 330,
+                "Li": 330,
+                "Jorge": 340 
+              },
+              "outside": {
+                "Municipality": 0
+              }
+            }
           },
           {
-            "description": "Big family",
-            "tenants": ["Sam", "Riley", "Carlos", "Claudio", "Esteban"],
-            "ownership": { "Municipality": 500, "Sam": 500, "Riley": 100, "Carlos": 100, "Claudio": 100, "Esteban": 100 }
+            "size": "Apartment #4 — Four bedrooms",
+            "description": "I've never seen the flat this dirty.",
+            "tenants": ["Robin", "Jack"],
+            "ownership": {
+              "inside": {
+                "Robin": 350,
+                "Jack": 350
+              },
+              "outside": {
+                "Municipality": 0,
+                "Felix": 250,
+                "Marta": 50
+              }
+            }
           },
           {
-            "description": "Old person",
-            "tenants": ["Abuelita"],
-            "ownership": { "Municipality": 500, "Abuelita": 100 }
+            "size": "Apartment #5 — Four bedrooms",
+            "description": "It's nice having some stability in the house again.",
+            "tenants": ["Gianluca", "Sasha", "Nat", "Floor"],
+            "ownership": {
+              "inside": {
+                "Gianluca": 275,
+                "Sasha": 275,
+                "Nat": 150,
+                "Floor": 100
+              },
+              "outside": {
+                "Municipality": 125,
+                "Camila": 75
+              }
+            }
           }
-        ]
+        ]  
       }
     ]
   }
