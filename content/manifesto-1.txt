@@ -5,7 +5,7 @@ Cohousing Agreement for the [Building Name] Collective Housing Complex Preamble
 This agreement continues the evolving articulation of the [Building Name] Collective Housing Complex, building upon the foundation laid in 2025. It reflects a deepening of the tenants’ shared commitment to collective care, mutual responsibility, and sustainable living. What began as a founding vision has become a living framework—shaped by lived experiences, renegotiated responsibilities, and a growing understanding of what it means to inhabit collectively. This system remains untethered from ownership as a commodity, emphasizing instead a cooperative ethos that balances individual needs with collective well-being and resilience.
 
 Article 1: Purpose and Intent 
-1.1 The aim of this housing model is to create a community where housing is no longer treated as a commodity but as a shared resource. This complex is a place where all residents contribute to, benefit from, and help sustain their living environment for present and future generations. 
+1.1 The aim of this housing model is to create a community where housing is no longer seen as something to be owned, but as something we all share and value together. This complex is a place where all residents contribute to, benefit from, and help sustain their living environment for present and future generations. 
 1.2 The system resists the logic of profit-driven real estate and the inheritance of wealth, prioritizing long-term stability and intergenerational care. Housing is considered a right rather than a privilege or an asset.
 
 Article 2: Structure of Ownership and Bonds 
@@ -21,8 +21,8 @@ Article 3: Rules of Bond Ownership
 • Bonds cannot be transferred to a third party outside the tenant community, nor can they be sold for profit. 
 • If a tenant moves out, they retain the bonds they have accumulated, but they no longer accrue new bonds. The outgoing tenant’s bonds are gradually transferred to the new tenant. 
 3.2 Exit Process: 
-• The tenant’s accumulated bonds are “bought out” in real time by the new tenant as part of their monthly rent payments. This is a form of reverse amortization, ensuring that the outgoing tenant's financial contributions are returned over time. 
-• If a tenant dies, their bonds are not passed to heirs. Instead, they are redistributed equally among the remaining tenants of the building.
+• When a tenant leaves, their accumulated bonds are "bought out" by the new tenant as part of their monthly rent. This process allows the outgoing tenant’s financial contributions to be returned gradually, fostering a smooth transition between tenants and maintaining financial balance. 
+• In the event of a tenant’s death, their bonds are not inherited by family members. Instead, the bonds are shared equally among the remaining tenants, creating a sense of collective responsibility and mutual support within the community.
 
 Article 4: Distribution of Bonds in Multi-Person Households 
 4.1 For households with multiple people, bond distribution is determined at the start of their cohabitation. 
@@ -35,7 +35,7 @@ Article 4: Distribution of Bonds in Multi-Person Households
 
 Article 5: Adaptability and Revision of the Collective Agreement 
 5.1 This agreement will evolve through periodic revisions, ensuring that it remains responsive to the lived realities and changing circumstances of the tenants. 
-5.2 Every ten years, a new version of the collective agreement will be created through open dialogue and consensus, responding to collective needs.
+5.2 If necessary, a new version of the collective agreement will be created through open dialogue and consensus, responding to collective needs.
 
 Article 6: The Role of the Municipality 
 6.1 The municipality will remain a partner in this initiative but will gradually divest its stake over time. 

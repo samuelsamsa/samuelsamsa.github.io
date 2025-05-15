@@ -1,62 +1,76 @@
-## A Different Kind of Economy
+Gen 5
 
-In the year 2025, a modest housing complex of five apartments begins a quiet experiment. Located in a mid-sized European city, it is neither utopia nor spectacle, but the slow unfolding of a different kind of economy — one where housing is no longer treated as a commodity, but as a shared resource sustained across generations.
+Cohousing Agreement for the UNI2 Collective Housing Complex Preamble
 
-At the outset, the municipality owns the complex and all its assets — not just in name, but in bonds. Each apartment is divided into 1,000 bonds, with their value proportional to the apartment’s size. The smallest unit, a one-room flat, has cheaper bonds than the four-room flats. This line has been added.
+This agreement marks a continuation of the UNI2 Collective Housing Complex’s journey, building on the foundation set in 2025. It strengthens the tenants’ shared commitment to stable housing, collective care, and mutual responsibility. What started as a vision has evolved into a living system—shaped by experience, renegotiated roles, and a deeper understanding of what it means to live together. This approach remains detached from the idea of housing as a commodity, focusing instead on a cooperative model that prioritizes stable, secure living while balancing individual needs with the well-being and resilience of the community.
 
-Every month, tenants “pay rent” — not to a landlord, but into ownership. Rent is converted into bonds: ten bonds per month, each a small but meaningful step toward full tenant control. As bonds are slowly acquired, the municipality’s stake diminishes. The goal is not profit, but transition.
+Article 1: Purpose and Intent 
+1.1 The aim of this housing model is to create a community where housing is no longer seen as something to be owned, but as something we all share and value together. This complex is a place where all residents contribute to, benefit from, and help sustain their living environment for present and future generations. 
+1.2 The system challenges the profit-driven nature of real estate and the inheritance of wealth, focusing instead on long-term stability and care across generations. Housing is seen as a basic right, not something to be treated as a privilege or a financial asset.
 
-This system is not about owning property, but about building shared responsibility and collective care.  They are both a record of contribution and a mechanism for return.
+Article 2: Structure of Ownership and Bonds 
+2.1 Municipal Ownership: At the outset, the municipality is the owner of the housing complex and all its assets, including the land and physical infrastructure. 
+2.2 Bonds: 
+• Each apartment is divided into 1,000 bonds. The value of each bond is proportional to the size of the apartment. The smallest unit (1 room flat) will have cheaper bonds, while the larger units (up to 4 room flats) will have more expensive bonds. 
+• Tenants are required to pay "the bond" each month every month. Once the flat is fully paid off, tenants are no longer required to make any further payments, except for maintenance costs.
+• As tenants accumulate bonds, the municipality’s stake in the building diminishes proportionally. The goal is to transition ownership to the tenants over generations.
 
-> When someone moves out, they retain their bonds, but they no longer accumulate new ones. Instead, their existing bonds begin to transfer to the new tenant, who purchases them gradually with each month’s rent.
+Article 3: Rules of Bond Ownership 
+3.1 Non-Speculative Bonds: 
+• Bonds cannot be resold or inherited. They are a record of the tenant’s contribution to the collective ownership of the building. 
+• Bonds cannot be transferred to a third party outside the tenant community, nor can they be sold for profit, ensuring that the system remains fair and focused on collective well-being. 
+• If a tenant moves out, they temporally retain the bonds they have accumulated, but they no longer accrue new bonds. The outgoing tenant’s bonds are gradually transferred to the new tenant, even if they do not want them to be transferred.
+3.2 Exit Process: 
+• The tenant’s accumulated bonds are “bought out” in real time by the new tenant as part of their monthly rent payments. This is a form of reverse amortization, ensuring that the outgoing tenant's financial contributions are returned over time. 
+• If a tenant passes away, their bonds are not inherited by heirs. Instead, they are shared equally among the remaining tenants, ensuring a collective approach to maintaining balance within the community.
 
-As the outgoing tenant’s ownership decreases, their invested value is returned in real time. It’s a form of reverse amortization — slow exit rather than profit extraction. Another addition here.
+Article 4: Distribution of Bonds in Multi-Person Households 
+4.1 For households with multiple people, bond distribution is determined at the start of their cohabitation. 
+4.2 Households can choose one of two methods for bond allocation: 
+• Equal division of bonds between all household members. 
+• Proportional division, reflecting the financial contributions or labor contributions of each member. 
+• Any changes to the division of bonds within the household can be renegotiated at any time with the mutual consent of all involved parties.
+4.3 Household Splits: If a household splits, the bonds that were accumulated by the departing person will be paid back to them progressively. The person staying in the household will gradually begin to accumulate those bonds. The amount of bonds transferred back to the person leaving will be based on the time they were a member of the household and the bonds they accrued during that time.
+4.4 Joining a Household: If a new person joins an existing household, they will begin to accumulate bonds progressively, starting from the moment they become part of the household. These bonds will be added to their personal allocation each month as they pay rent and contribute to the household, until they have accumulated an amount proportional to their residence and time within the community.
 
-If a tenant dies, their bonds do not pass to an heir. Instead, they are redistributed equally among the current tenants of the building. The system resists the logic of intergenerational wealth-hoarding and reframes housing as a right, not an asset.
+Article 5: Choosing a New Member to Join a Household
+5.1 Selection Process: When a household wishes to add a new member, the decision to admit that person is made based on a combination of the number of bonds already owned by the existing members of the household and the collective agreement of the household members.
+5.2 Bond-Based Voting Power: The decision to approve or deny a new member’s entry into the household is determined by the proportion of bonds owned by each member of the household. Tenants with more bonds have a greater say in the decision-making process. However, all members of the household must reach a consensus on the decision.
+5.3 Application Process: The person wishing to join a household must submit an application through a formal process, which will include a description of their reasons for joining and how they plan to contribute to the household. This application will be reviewed by the current household members, and a decision will be made through consensus.
+5.4 Apartment Size Consideration: The apartment size allocated to a new household will be based on the number of people in the household and their needs. A household of four people, for example, will have more chances of being allocated a four-room apartment than a single-person household. The distribution of apartments is designed to support household growth and ensure fairness in the allocation process based on the number of individuals needing housing.
 
----
+Article 6: Prohibition of Subletting and External Property Ownership6.1 Subletting Prohibited: Subletting the apartment is strictly prohibited. If atenant is found subletting the apartment, the household will be expelled from thebuilding, and they will be required to vacate immediately.6.2 No Wealth Accumulation Through External Property: The purpose of thissystem is to stop treating housing as wealth. If any member of the householdacquires or buys a property outside of this system, they will no longer be allowedto stay in the cohousing complex. This rule aims to ensure that housing remains ashared, communal resource rather than an asset for individual wealthaccumulation.
+Article 7: Children Gaining Bonds Upon Turning 187.1 Gaining Bonds: Once children residing in the household turn 18 years old,they will begin to accumulate bonds at the same rate as the other tenants. Thesebonds will be added progressively to their personal allocation as they contributeto the household and pay rent.
 
-### Life Over Seven Generations
+Article 8: Affordability and Reintegrating Into the System8.1 Inability to Afford Payments: If a household is unable to afford paying rent andaccumulating bonds, they will stop gaining bonds. Their total amount of bonds will neitherincrease nor decrease during this period.8.2 Reintegrating Through Maintenance: There is an option to reintegrate into the system byoffering the household an opportunity to take on responsibility for the maintenance of thecommon areas of the building. This provides a way for those who cannot currently afford rentto continue contributing to the community and maintain a stable housing situation.8.3 Stable Housing: The system’s primary goal is to create a stable housing situation foreveryone, without the stress of financial insecurity, and ensure that housing remains accessibleregardless of economic challenges.
+Article 9: Municipality’s Full Payment of Apartments9.1 Municipality Fully Paid Apartments: Some of the apartments in the building are now fullypaid to the municipality. These apartments no longer involve the municipality's financial stake,and their role in the system has ended.9.2 Absence of Municipality in Ownership: As the municipality has fully divested from certainapartments, its presence and financial stake no longer impact the day-to-day governance andoperation of the housing system.
+Article 10: Governance and Leadership10.1 Governance Structure: The organization is not fully internal and horizontal. It has aleadership structure where the head changes every six months. The head has a coordinatingand administrative role but does not hold decision-making power in matters affecting thecollective.10.2 Role of the Head: The head is responsible for overseeing the operational tasks andfacilitating communication among tenants. This system ensures continuity in leadership whilemaintaining a fair, rotating responsibility among the residents.
 
-The life of this building unfolds over seven generations, each a decade long. In 2025, the flats are occupied by diverse households:  
-- A young couple in the one-room unit  
-- Two friends cohabiting in the two-room flat  
-- A small nuclear family in the three-room  
-- An intergenerational household in the larger four-room unit  
-- A solitary older person in the remaining four-room flat
+Article 11: Adaptability and Revision of the Collective Agreement
+11.1 This agreement will evolve through periodic revisions to ensure that it consistently meets the changing needs and realities of the tenants, fostering a secure housing environment for all.
+11.2 If needed, a new version of the collective agreement will be created through open dialogue and consensus, ensuring that the security and stability of housing are always prioritized to meet the collective needs.
 
-Time passes.
+Article 12: The Role of the Municipality
+12.1 The municipality will remain a partner in this initiative but will gradually divest its stake over time.
+12.2 The municipality’s role is not to profit from this model but to facilitate and support the transition of ownership to the tenant community.
+12.3 Upon complete divestment, the cooperative will function entirely without municipal ownership, with all decision-making power residing within the tenant community.
 
-- In the second generation, the young couple splits. One stays and continues to acquire bonds while the other is slowly bought out by the next tenant.
-- In the third generation, children grow up and move into their own units. A group of students replaces the elderly tenant; their bonds are redistributed.
-- In the fourth generation, one resident cannot pay rent — the collective agreement pauses their bond accumulation without eviction.
-- Maintenance costs are shared and paid through the coop’s collective fund.
+Article 13: Longevity of the Cohousing Model
+13.1 The system is designed to evolve across generations, ensuring long-term sustainability for tenants and the building itself.
+13.2 With time, the bonds will circulate entirely within the tenant community. Rent payments will fund the maintenance and upkeep of the building as well as support new cooperative housing initiatives elsewhere in the city.
+13.3 The aim is to provide housing security, continuity, and intergenerational care while resisting the pressures of speculation, ownership, and wealth accumulation.
 
-Over time, the character of the building changes. Friendships form and fade. Tenants age, die, or relocate. The economic mechanism adapts not through algorithms or contracts, but through conversation.
+Article 14: Collective Maintenance and Cooperative Fund14.1 Maintenance Fund: The cooperative will collectively fund the ongoing maintenance of thebuilding, which includes infrastructure repairs, communal spaces, and any necessary upgradesto the property.14.2 Contributions:• All tenants contribute to the maintenance fund through their monthly rent payments.• Special assessments may be levied if the need for major repairs arises, though suchassessments will be decided collectively by the tenants through consensus.5.3 Collective Agreement on Care Work: The collective agreement, which is revised everydecade, will take into account the contribution of care work within households, andadjustments may be made to reflect these contributions in the bond distribution ormaintenance fund allocation.
 
-Every ten years, a new version of the building’s manifesto is written — a living rental agreement that responds to real, lived tensions:  
-- How to account for care work within households?  
-- Should bond distribution reflect emotional labour?  
-- What happens when someone needs to leave abruptly?
+Article 15: Death, Relocation, and Redistribution of Bonds
+15.1 In the event of a tenant’s death, their bonds will not pass to their heirs. Instead, the bonds will be redistributed equally among the remaining tenants.
+15.2 If a tenant relocates or chooses to leave the building, their bonds will begin to transfer to the incoming tenant gradually over time, following the exit process described in Article 3.
+15.3 The redistribution of bonds upon death or departure will ensure the continued fluidity of ownership within the tenant community without creating financial windfalls for individuals or families.
 
----
+Article 16: Community Governance and Decision-Making
+16.1 Consensus-Based Governance: Decisions related to the collective management of the building, including changes to this agreement, will be made through a consensus process.
+16.2 Regular Community Meetings: Tenants will meet regularly to discuss issues of maintenance, governance, and any other concerns affecting the community.
+16.3 Conflict Resolution: In the case of disputes or disagreements, a collective process of mediation and conflict resolution will be undertaken to ensure that all voices are heard and considered in finding a fair solution.
 
-### Shared Decision-Making
-
-In multi-person households, bonds are split according to a declaration made at the start of their cohabitation. They may choose equal division, or reflect financial contributions. If one partner pays rent and another cooks and cleans, their bond agreement can reflect that.
-
-These decisions are local and negotiated — not bureaucratically imposed, but communally made and revisable.
-
----
-
-### The Future
-
-By 2085, the seventh generation lives in a building that no one owns outright — but that everyone inhabits with care. The municipality has long since been fully bought out. The bonds now circulate entirely within the tenant community, and the reinvestment of monthly rent supports maintenance, communal infrastructure, and new cooperative housing projects elsewhere in the city.
-
-This model was developed in direct response to the ongoing housing crisis and the deepening inequalities it produces. Inherited wealth has become one of the primary factors determining access to stable housing — a dynamic that entrenches privilege across generations while excluding others.
-
-By removing the profit motive and inheritance logic from the housing system, this model offers a concrete alternative: one where housing is understood not as an individual investment, but as a shared, intergenerational commitment.
-
-> Its circular economy offers continuity without accumulation; security without speculation.
-
-This is a model to be scaled — not through corporate franchising, but through grassroots replication and municipal partnerships. It is not just a critique of the current system, but a living proposal for something more equitable.
+Signatories:
+By signing this agreement, each tenant acknowledges their commitment to these principles and their responsibility to uphold the shared values of this cooperative housing model.
