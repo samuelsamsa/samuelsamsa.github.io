@@ -133,14 +133,72 @@
   align-items: center;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
-  height: 100%;
-  box-sizing: border-box;
+  height: 95vh;
   padding: 10px 5px;
 }
 
 .chartjs-tooltip {
   z-index: 9999 !important;
   position: relative; /* or absolute */
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9em;
+  }
+
+  #timeline {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  #main {
+    flex-direction: column;
+  }
+
+  #building, #manifesto {
+    width: 100%;
+    border-right: none;
+    height: auto;
+    padding: 10px;
+  }
+
+  #bond-chart-container {
+    width: 100vW;/* Optionally hide the vertical chart on mobile */
+    height: 15vH;
+  }
+
+  .apartment {
+    flex-direction: row;
+    padding: 10px 0;
+  }
+
+  .houseInfo {
+    margin-bottom: 10px;
+  }
+
+  .chart {
+    justify-content: right;
+    min-width: 13vh;
+        max-width: 13vh;
+  }
+
+  .pie-chart {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .inside-icon, .outside-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .owner::after {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
 }
 
 
@@ -380,7 +438,7 @@ const ctxBond = document.getElementById('bond-chart').getContext('2d');
 if (bondChart) {
   bondChart.destroy();
 }
-
+const isMobile = window.innerWidth <= 768;
 bondChart = new Chart(ctxBond, {
   type: 'bar',
   data: {
@@ -393,7 +451,7 @@ bondChart = new Chart(ctxBond, {
     }))
   },
   options: {
-    indexAxis: 'x',  // horizontal bars (so vertical stacked bars)
+    indexAxis: isMobile ? 'y' : 'x', // horizontal bars (so vertical stacked bars)
     responsive: true,
     maintainAspectRatio: false,
     scales: {
@@ -401,7 +459,7 @@ bondChart = new Chart(ctxBond, {
         stacked: true,
         beginAtZero: true,
         title: {
-          display: true,
+          display: false,
           text: 'Bonds'
         }
       },
